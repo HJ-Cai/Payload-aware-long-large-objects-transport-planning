@@ -13,12 +13,12 @@ This repository contains the MATLAB code used for mobile-manipulator rebar trans
 
 - `UR20.urdf`, `meshes/` - UR20 robot model and meshes.
 - `gripper.urdf`, `gripper_meshes/` - gripper model and meshes.
-- `predictRebarDeflectionNN.m`, `computeRebarDeflection.m`, `deflection_nn_seed11.onnx`, `defl_scaler.json`, `+rebarDeflectionNN/` - static rebar deflection model support files.
+- `computeRebarDeflection.m`, `deflection_predictor.m`, `deflection_nn_4x7_bs32_lr001.keras`, `defl_scaler_4x7_bs32_lr001.json` - static rebar deflection model support files.
 - `findTransportHeightCircleChain.m`, `PriorityQueue.m` - payload-aware height/corridor selection helpers.
 
 ## MATLAB requirements
 
-Developed with MATLAB R2025a/R2025b style APIs and Robotics System Toolbox. ONNX model loading requires MATLAB Deep Learning Toolbox support for ONNX import.
+Developed with MATLAB R2025a/R2025b style APIs, Robotics System Toolbox, and Deep Learning Toolbox.
 
 ## Basic usage
 

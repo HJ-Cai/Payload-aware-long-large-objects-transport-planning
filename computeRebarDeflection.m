@@ -38,7 +38,7 @@ function deflection = computeRebarDeflection(diameter_mm, length_m, gripPoint)
     end
 
     % ---- call the predictor (expects mm + m) ----
-    deflection = predictRebarDeflectionNN(diameter_mm, effLen);  % metres
+    deflection = deflection_predictor(diameter_mm, effLen);  % metres
 
     % Optional bounds:
     % deflection = max(0.03, min(0.40, deflection));  % clamp 3–40 cm
