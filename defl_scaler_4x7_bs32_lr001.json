@@ -1,0 +1,16 @@
+{
+  "mean": [
+    0.021908450704225337,
+    1.794014084507043
+  ],
+  "scale": [
+    0.008476898955959173,
+    1.0135746669266306
+  ],
+  "data_path": "/content/combined_deflection_training_with_short_lengths.xlsx",
+  "seed": 11,
+  "layers": 4,
+  "neurons": 7,
+  "batch_size": 32,
+  "learning_rate": 0.01
+}

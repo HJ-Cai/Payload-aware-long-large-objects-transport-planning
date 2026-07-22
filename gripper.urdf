@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="gripper">
+    <!-- FIX: Added a new, empty 'tool0' link to act as the root -->
+    <link name="tool0"/>
+
+    <!-- FIX: Added a fixed joint to connect 'tool0' to your first component -->
+    <joint name="tool0_to_component1" type="fixed">
+        <parent link="tool0"/>
+        <child link="Component1"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="Component1">
+        <inertial>
+            <origin xyz="4.664782436582747e-11 2.8471578281465793e-17 -0.05006071605888646" rpy="0.0 0.0 0.0" />
+            <mass value="1.8807001156566872" />
+            <inertia ixx="0.0013933187791043168" iyy="0.0014188312791433523" izz="0.0018367001453409107" ixy="2.141860025173074e-18" iyz="1.7523720274135495e-19" ixz="-1.759937135531329e-12" />
+        </inertial>
+        <visual name="Component1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="gripper_meshes/Component1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="gripper_meshes/Component1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="finger">
+        <inertial>
+            <origin xyz="-1.1175870895385742e-09 -0.02166666689018404 -0.005" rpy="0.0 -0.0 0.0" />
+            <mass value="0.04709999999999994" />
+            <inertia ixx="1.125166666666666e-05" iyy="1.1774999999999426e-06" izz="1.1644166666666671e-05" ixy="1.9068066102479742e-21" iyz="1.6940658945086007e-21" ixz="-3.685939023859382e-21" />
+        </inertial>
+        <visual name="finger_visual">
+            <origin xyz="0.0950000011175871 -0.03499999977648262 -0.009999999999999993" rpy="-1.5707963267948966 6.123233995736766e-17 3.141592653589793" />
+            <geometry>
+                <mesh filename="gripper_meshes/finger.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="finger_collision">
+            <origin xyz="0.0950000011175871 -0.03499999977648262 -0.009999999999999993" rpy="-1.5707963267948966 6.123233995736766e-17 3.141592653589793" />
+            <geometry>
+                <mesh filename="gripper_meshes/finger.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="finger-2">
+        <inertial>
+            <origin xyz="1.1175870717750058e-09 -0.02166666689018404 -0.005000000000000009" rpy="0.0 -0.0 0.0" />
+            <mass value="0.04709999999999993" />
+            <inertia ixx="1.1251666666666612e-05" iyy="1.1775000000000578e-06" izz="1.1644166666666761e-05" ixy="-1.960097357704598e-21" iyz="-1.1858461261560205e-20" ixz="-7.496228173827347e-21" />
+        </inertial>
+        <visual name="finger-2_visual">
+            <origin xyz="-0.09715810676377629 -0.035120643331385 0.03166755331773633" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="gripper_meshes/finger-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="finger-2_collision">
+            <origin xyz="-0.09715810676377629 -0.035120643331385 0.03166755331773633" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="gripper_meshes/finger-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Component1_Slider-1" type="prismatic">
+        <origin xyz="0.0 0.025 -0.035" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="Component1" />
+        <child link="finger" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="-0.015" upper="0.0" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Component1_Slider-2" type="prismatic">
+        <origin xyz="0.0 -0.025 -0.035" rpy="-1.5707963267948966 -0.0 3.141592653589793" />
+        <parent link="Component1" />
+        <child link="finger-2" />
+        <axis xyz="-0.0 0.0 1.0" />
+        <limit lower="-0.015" upper="0.0" effort="1000000" velocity="1000000" />
+    </joint>
+</robot>

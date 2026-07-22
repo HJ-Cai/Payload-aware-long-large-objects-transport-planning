@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="UR20">
+    <!-- FIX: Added a new, empty base link to act as the root -->
+    <link name="base_link"/>
+
+    <!-- FIX: Added a fixed joint to connect the new base to your first component -->
+    <joint name="base_link_to_C-2003903" type="fixed">
+        <parent link="base_link"/>
+        <child link="C-2003903"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </joint>
+
+    <link name="C-2003904">
+        <inertial>
+            <origin xyz="8.582280121082671e-06 0.02632702725116417 0.10594826441464056" rpy="0.0 -0.0 0.0" />
+            <mass value="51.11436118999412" />
+            <inertia ixx="0.3337342332377551" iyy="0.2728286048846069" izz="0.2819464759288838" ixy="-9.10098319923277e-05" iyz="-0.0403448732134169" ixz="-9.030484287795087e-05" />
+        </inertial>
+        <visual name="C-2003904_visual">
+            <origin xyz="0.0 6.938893903907228e-18 5.329070518200751e-17" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003904.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="C-2003904_collision">
+            <origin xyz="0.0 6.938893903907228e-18 5.329070518200751e-17" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003904.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="C-2003905">
+        <inertial>
+            <origin xyz="-1.061607639901815e-07 -0.38327795729635017 0.11836234191910082" rpy="0.0 -0.0 0.0" />
+            <mass value="169.645679294902" />
+            <inertia ixx="16.546097013818397" iyy="0.6639170169023512" izz="16.432642115533838" ixy="1.815751062667857e-05" iyz="0.145188364728849" ixz="-3.135710589186512e-06" />
+        </inertial>
+        <visual name="C-2003905_visual">
+            <origin xyz="1.734723475976807e-17 7.105427357601002e-17 0.12889999999999993" rpy="3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003905.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="C-2003905_collision">
+            <origin xyz="1.734723475976807e-17 7.105427357601002e-17 0.12889999999999993" rpy="3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003905.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="C-2003906">
+        <inertial>
+            <origin xyz="1.989003974763035e-08 0.27618672731410715 0.0989329272652019" rpy="0.0 -0.0 0.0" />
+            <mass value="83.42927034414129" />
+            <inertia ixx="5.295734452525579" iyy="0.21019538414851222" izz="5.257905701695876" ixy="4.911257376964472e-06" iyz="-0.08578535814387589" ixz="2.2970049657263522e-06" />
+        </inertial>
+        <visual name="C-2003906_visual">
+            <origin xyz="5.068563033235417e-17 7.105427357601002e-16 0.10750000000000282" rpy="0.0 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003906.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="C-2003906_collision">
+            <origin xyz="5.068563033235417e-17 7.105427357601002e-16 0.10750000000000282" rpy="0.0 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003906.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="C-2003907">
+        <inertial>
+            <origin xyz="1.162011552490492e-08 -0.01717062677092713 0.062392350798078304" rpy="0.0 -0.0 0.0" />
+            <mass value="9.51992176071133" />
+            <inertia ixx="0.02170450532526047" iyy="0.01604214587143854" izz="0.017461608752668667" ixy="3.5431493803636145e-07" iyz="0.0025756049489737975" ixz="-3.461439637378337e-07" />
+        </inertial>
+        <visual name="C-2003907_visual">
+            <origin xyz="-7.699724682637784e-18 -5.684341886080802e-16 0.07639999999999723" rpy="3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003907.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="C-2003907_collision">
+            <origin xyz="-7.699724682637784e-18 -5.684341886080802e-16 0.07639999999999723" rpy="3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003907.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="C-2003908">
+        <inertial>
+            <origin xyz="-4.3997827033215e-06 0.023880833083526447 0.06335976700510684" rpy="0.0 -0.0 0.0" />
+            <mass value="10.51789415206753" />
+            <inertia ixx="0.026860651545739245" iyy="0.017805836125596386" izz="0.022935495474472156" ixy="-5.460522182805797e-06" iyz="-0.0037712171357187074" ixz="-4.7578428078395185e-06" />
+        </inertial>
+        <visual name="C-2003908_visual">
+            <origin xyz="-6.8400087045674564e-15 -3.836930773104541e-15 0.07640000000000044" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003908.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="C-2003908_collision">
+            <origin xyz="-6.8400087045674564e-15 -3.836930773104541e-15 0.07640000000000044" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003908.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="C-2007588">
+        <inertial>
+            <origin xyz="-2.0607734918683444e-08 2.928020997785552e-06 0.027097992961663236" rpy="0.0 -0.0 0.0" />
+            <mass value="3.324383416151438" />
+            <inertia ixx="0.0029447821487131876" iyy="0.0029435860436189953" izz="0.004233500213370434" ixy="-3.5867105967006426e-09" iyz="-1.998691760540794e-06" ixz="7.025859658351512e-10" />
+        </inertial>
+        <visual name="C-2007588_visual">
+            <origin xyz="2.6645352591003757e-15 0.22729999999998995 -0.25750000000038237" rpy="-1.570796326794897 -1.95526018874273e-13 1.5707963267948966" />
+            <geometry>
+                <mesh filename="meshes/C-2007588.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="C-2007588_collision">
+            <origin xyz="2.6645352591003757e-15 0.22729999999998995 -0.25750000000038237" rpy="-1.570796326794897 -1.95526018874273e-13 1.5707963267948966" />
+            <geometry>
+                <mesh filename="meshes/C-2007588.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="C-2003903">
+        <inertial>
+            <origin xyz="-8.59443752031847e-12 0.04640297417413969 1.8005554632068732e-10" rpy="0.0 0.0 0.0" />
+            <mass value="28.046487516683325" />
+            <inertia ixx="0.10651483485876435" iyy="0.15854885249715941" izz="0.1065146037107443" ixy="1.3169941045882529e-12" iyz="-6.283164246444758e-12" ixz="-1.1248742700237944e-10" />
+        </inertial>
+        <visual name="C-2003903_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003903.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="C-2003903_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/C-2003903.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="C-2003903_Revolute-1" type="continuous">
+        <origin xyz="0.0 0.10740000000000001 0.0" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="C-2003903" />
+        <child link="C-2003904" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+    <joint name="C-2003904_Revolute-2" type="continuous">
+        <origin xyz="0.0 0.134 0.1289" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="C-2003904" />
+        <child link="C-2003905" />
+        <axis xyz="0.0 -0.0 1.0" />
+    </joint>
+    <joint name="C-2003905_Revolute-3" type="continuous">
+        <origin xyz="0.0 -0.8620000000000001 0.0167" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="C-2003905" />
+        <child link="C-2003906" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+    <joint name="C-2003906_Revolute-4" type="continuous">
+        <origin xyz="0.0 0.7286999999999999 0.026099999999999995" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="C-2003906" />
+        <child link="C-2003907" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+    <joint name="C-2003907_Revolute-5" type="continuous">
+        <origin xyz="0.0 -0.08290000000000021 0.07640000000000001" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="C-2003907" />
+        <child link="C-2003908" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+    <joint name="C-2003908_Revolute-6" type="continuous">
+        <origin xyz="0.0 0.09820000000000001 0.07639999999999987" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="C-2003908" />
+        <child link="C-2007588" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+</robot>

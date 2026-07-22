@@ -1,0 +1,24 @@
+﻿# MATLAB generated files
+*.asv
+*.mlx.autosave
+*.bak_before_restore_*
+slprj/
+codegen/
+*.mex*
+
+# Generated experiment outputs
+seeds/
+result/
+results/
+comparison_results/
+*.mat
+*.fig
+*.emf
+*.png
+*.svg
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
