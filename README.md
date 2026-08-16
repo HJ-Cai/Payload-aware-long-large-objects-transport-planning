@@ -69,10 +69,10 @@ When switching to the S-corridor or door layout, also select its matching placem
 All three planner scripts expose the same switch near the top of the file:
 
 ```matlab
-useRebarEnvelope = false;
+useRebarEnvelope = true;
 ```
 
-The sag-aware envelope is always displayed during trajectory replay, regardless of this setting. The switch controls only whether the envelope participates in Plan 4 collision checking. The default is `false` so the planner configuration remains consistent with the reported results; set it to `true` to include the envelope in planning/validation. The displayed envelope uses `1.10 x` the physical rebar length and the predicted deflection as its downward swept height. The selected setting and envelope dimensions are saved in each output bundle (`bundle.planner.P` and `bundle.rebarEnvelope`).
+The sag-aware envelope is always displayed during trajectory replay, regardless of this setting. The switch controls only whether the envelope participates in Plan 4 collision checking. The default is `true` so the planner configuration remains consistent with the reported results; set it to `false` to exclude the envelope in planning/validation. The displayed envelope uses `1.10 x` the physical rebar length and the predicted deflection as its downward swept height. The selected setting and envelope dimensions are saved in each output bundle (`bundle.planner.P` and `bundle.rebarEnvelope`).
 
 For `PHS_Bi_RRT.m` and `HS_Bi_RRT.m`, the envelope is checked while extending and validating the custom planner path. For the standard `Bi_RRT.m` baseline, MATLAB's `manipulatorRRT` continues to plan with the attached physical payload and the optional swept envelope is applied by the common Plan 4 task-rule validation.
 
