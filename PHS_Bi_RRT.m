@@ -9,7 +9,7 @@ rng(1, 'twister');                 % fixed seed for a reproducible single run
 runID = 1;
 % The envelope is always displayed. This switch controls only whether
 % Plan 4 collision checking considers it. Keep false for published runs.
-useRebarEnvelope = false;
+useRebarEnvelope = true;
 % =========================================================================
 %% ========================================================================
 %  1. INITIALIZATION AND SETUP
